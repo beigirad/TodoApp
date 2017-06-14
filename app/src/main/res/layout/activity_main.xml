@@ -1,0 +1,75 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/fakeView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:alpha="0.8"
+        android:src="@drawable/empty_view_bg" />
+    <LinearLayout
+        android:id="@+id/toDoEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:alpha="0.8"
+            android:src="@drawable/empty_view_bg" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/no_to_dos"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <include layout="@layout/base_toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/base_toolbar"/>-->
+
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+
+    <ir.beigirad.todoapp.CustomUI.RecyclerViewEmptySupport
+        android:id="@+id/toDoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addToDoItemFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_add_white_24dp"
+/>
+</android.support.design.widget.CoordinatorLayout>
+

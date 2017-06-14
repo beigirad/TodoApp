@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "ir.beigirad.todoapp"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    lintOptions {
+        abortOnError false
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a'
+            universalApk false
+        }
+    }
+}
+
+ext {
+    appCompatVertsion = '25.3.1'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+
+    compile "com.android.support:appcompat-v7:${appCompatVertsion}"
+    compile "com.android.support:design:${appCompatVertsion}"
+    compile "com.android.support:recyclerview-v7:${appCompatVertsion}"
+    compile "com.android.support:cardview-v7:${appCompatVertsion}"
+    compile "com.android.support:support-v4:${appCompatVertsion}"
+
+    compile 'com.github.ganfra:material-spinner:1.1.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.wdullaer:materialdatetimepicker:1.5.1'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.google.firebase:firebase-core:10.0.1'
+
+    compile 'com.github.deano2390:MaterialShowcaseView:1.1.0'
+}
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

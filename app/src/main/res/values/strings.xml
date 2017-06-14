@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="no_to_dos">هیچ وظیفه ای اضافه نشده.</string>
+    <string name="title">عنوان</string>
+    <string name="remind_me">بهم یادآوری کن</string>
+    <string name="choose_date">تاریخ</string>
+    <string name="choose_time">زمان</string>
+    <string name="remind_date_and_time">یادآوری در %1$s, %2$s %3$s</string>
+    <string name="about">درباره</string>
+    <string name="app_version">ورژن: %1$s</string>
+    <string name="contact_me">ارتباط با من :</string>
+    <string name="made_by">توسعه : فرهاد بیگی راد</string>
+    <string name="done_label">تمومه</string>
+    <string name="date_reminder_default">امروز</string>
+    <string name="date_error_check_again">از تاریخ وارد شده گذشته است.</string>
+    <string name="night_mode">حالت شب</string>
+    <string name="night_mode_on_summary">حالت شب:روشن</string>
+    <string name="night_mode_off_summary">حالت شب:خاموش</string>
+
+    <string-array name="snooze_options">
+        <item>۱۰ دقیقه</item>
+        <item>۳۰ دقیقه</item>
+        <item>۱ ساعت</item>
+    </string-array>
+
+    <string name="snooze">تاخیر انداختن</string>
+    <string name="remove">حذف</string>
+    <string name="todo_error">یک وظیفه وارد کنید</string>
+
+    <string name="email_address" translatable="false">beigirad@gmail.com</string>
+    <string name="telegram" translatable="false">t.me/beigirad</string>
+    <string name="night_mode_pref_key">NightModePreference</string>
+    <string name="at">در</string>
+    <string name="add_from_here">برای اضافه کردن یک وظیفه/یادآور اینجارو بزن.</string>
+    <string name="ok">باشه</string>
+    <string name="swap_to_remove">برای حذف کردن موارد لیست را به طرفین بکشید.</string>
+    <string name="show_setting_menu">از منوی بالاهم میتونی به تنظیمات دسترسی داشته باشی</string>
+</resources>

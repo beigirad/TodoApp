@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ir.beigirad.todoapp">
+
+    <uses-permission android:name="ANDROID.PERMISSION.INTERNET" />
+    <uses-permission android:name="ANDROID.PERMISSION.ACCESS_NETWORK_STATE" />
+
+    <!--
+    We set theme to DarkTheme because when the app opens it shows
+    a white screen if our theme here is LightTheme. The screen is shown for
+    about 1 second, but it's jarring if users have set Night Mode to true.
+    -->
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/todoapp"
+        android:label="@string/app_name"
+        android:theme="@style/CustomStyle.DarkTheme">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.AddToDoActivity"
+            android:parentActivityName=".Activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.ReminderActivity"
+            android:label="@string/app_name" />
+
+        <service android:name=".Services.TodoNotificationService" />
+        <service android:name=".Services.DeleteNotificationService" />
+
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:parentActivityName=".Activities.MainActivity" />
+    </application>
+
+</manifest>
